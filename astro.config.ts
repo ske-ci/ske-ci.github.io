@@ -88,9 +88,36 @@ export default defineConfig({
         name: 'SIGUI Kessé Emmanuel',
         short_name: 'SIGUICI',
         theme_color: '#ffffff',
+        display: 'standalone',
+        icons: [
+          {
+            src: '/images/icons/manifest-icon-192.maskable.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: '/images/icons/manifest-icon-192.maskable.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+          {
+            src: '/images/icons/manifest-icon-512.maskable.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: '/images/icons/manifest-icon-512.maskable.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+        ],
       },
       pwaAssets: {
-        config: true,
+        disabled: true
       },
       workbox: {
         navigateFallback: '/',
