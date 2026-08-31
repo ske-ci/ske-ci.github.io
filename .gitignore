@@ -1,6 +1,7 @@
 # Build output
 build/
 dist/
+dev-dist/
 out/
 
 # Generated types
@@ -28,6 +29,7 @@ lerna-debug.log*
 # Editor
 .vscode/*
 !.vscode/extensions.json
+# intellij stuff
 .idea
 .DS_Store
 *.suo

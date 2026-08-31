@@ -15,12 +15,12 @@
       "deno.unstable"
     ]
   },
-  "test": { "include": ["tests/"], "exclude": ["dist/"] },
+  "test": { "include": ["tests/"], "exclude": ["dist/", "dev-dist/"] },
   "imports": {
     "~/": "./",
     "@/": "./src/"
   },
-  "exclude": ["**/dist/**", "**/.astro/**", "**/pagefind/**"],
+  "exclude": ["**/dist/**", "**/dev-dist/**", "**/.astro/**", "**/pagefind/**"],
   "lint": {
     "rules": { "tags": ["recommended"] }
   },

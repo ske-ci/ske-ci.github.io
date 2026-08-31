@@ -1,6 +1,7 @@
 import sitemap from '@astrojs/sitemap';
 import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
+import AstroPWA from '@vite-pwa/astro';
 import { defineConfig, passthroughImageService } from 'astro/config';
 import { app } from './src/config';
 
@@ -77,8 +78,44 @@ export default defineConfig({
         },
       ],
     }),
+    AstroPWA({
+      mode: 'development',
+      base: '/',
+      scope: '/',
+      includeAssets: ['favicon.svg'],
+      registerType: 'autoUpdate',
+      manifest: {
+        name: 'SIGUI Kessé Emmanuel',
+        short_name: 'SIGUICI',
+        theme_color: '#ffffff',
+      },
+      pwaAssets: {
+        config: true,
+      },
+      workbox: {
+        navigateFallback: '/',
+        globPatterns: ['**/*.{css,js,html,svg,png,ico,txt}'],
+      },
+      devOptions: {
+        enabled: true,
+        navigateFallbackAllowlist: [/^\/$/],
+      },
+      experimental: {
+        directoryAndTrailingSlashHandler: true,
+      },
+    }),
   ],
   vite: {
     plugins: [tailwindcss()],
+    logLevel: 'info',
+    define: {
+      __DATE__: `'${new Date().toISOString()}'`,
+    },
+    server: {
+      fs: {
+        // Allow serving files from hoisted root node_modules
+        allow: ['../..'],
+      },
+    },
   },
 });
