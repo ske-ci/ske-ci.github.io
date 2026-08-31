@@ -41,6 +41,7 @@
     "i18n:check": "deno run -A --sloppy-imports scripts/check-i18n.ts",
     "preview": "deno run -A npm:astro preview",
     "prod": "./run check && ./run build",
+    "pwa:icons": "./scripts/generate-icons.sh",
     "serve": "deno run -A dist/server/entry.mjs",
     "sync": "deno run -A npm:astro sync",
     "upgrade": "deno run -A npm:@astrojs/upgrade"

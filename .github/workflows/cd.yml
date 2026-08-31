@@ -33,7 +33,7 @@ jobs:
         with:
           runtime: deno
           version: ${{ matrix.deno-version }}
-          scripts: check,build
+          scripts: pwa:icons,check,build
 
       - name: 📥 Upload distribution files
         id: deployment

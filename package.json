@@ -37,6 +37,7 @@
     "@vite-pwa/astro": "^1.2.0",
     "astro": "^7.2.0",
     "autoprefixer": "^10.5.4",
+    "pwa-asset-generator": "^8.1.5",
     "tailwindcss": "^4.3.3",
     "ts-node": "^10.9.2",
     "tslib": "^2.8.1",
