@@ -18,6 +18,19 @@
     "type": "git",
     "url": "https://github.com/siguici/siguici"
   },
+  "scripts": {
+    "build": "astro build",
+    "check": "astro check && biome ci . && ./run i18n:check",
+    "dev": "astro dev",
+    "fix": "./run sync && biome check --write . && biome format --write .",
+    "i18n:check": "bun scripts/check-i18n.ts",
+    "preview": "astro preview",
+    "prod": "./run check && ./run build",
+    "pwa:icons": "./scripts/generate-icons.sh",
+    "serve": "bun dist/server/entry.mjs",
+    "sync": "astro sync",
+    "upgrade": "bunx @astrojs/upgrade"
+  },
   "dependencies": {
     "@astrojs/starlight": "^0.41.7",
     "astro": "^7.2.0",
@@ -35,7 +48,6 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/node": "^26.1.2",
     "@vite-pwa/astro": "^1.2.0",
-    "astro": "^7.2.0",
     "autoprefixer": "^10.5.4",
     "pwa-asset-generator": "^8.1.5",
     "tailwindcss": "^4.3.3",

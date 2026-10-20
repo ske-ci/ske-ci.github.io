@@ -1,62 +1,47 @@
 name: CD
-
 on:
   push:
     branches:
       - main
-
   workflow_dispatch:
-
 permissions:
   contents: read
   pages: write
   id-token: write
   actions: read
-
 jobs:
   build:
     runs-on: ${{ matrix.operating-system }}
-
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        deno-version: [2.9]
-
+        bun-version: [1.4.3]
     name: 📦️ Building @siguici's pages
-
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v6
-
       - name: 🔧 Setup JS
         uses: siguici/setup-js@v1
         with:
-          runtime: deno
-          version: ${{ matrix.deno-version }}
+          runtime: bun
+          version: ${{ matrix.bun-version }}
           scripts: pwa:icons,check,build
-
       - name: 📥 Upload distribution files
         id: deployment
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
-
   deploy:
     needs: build
-
     runs-on: ubuntu-latest
-
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
     strategy:
       fail-fast: true
       matrix:
         operating-system: [ubuntu-latest]
-
     name: 🚀 Deploy siguici.github.io
-
     steps:
       - name: 📂 Deploy to GitHub Pages
         id: deployment

@@ -117,7 +117,7 @@ export default defineConfig({
         ],
       },
       pwaAssets: {
-        disabled: true
+        disabled: true,
       },
       workbox: {
         navigateFallback: '/',

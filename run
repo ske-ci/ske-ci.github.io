@@ -1,14 +1,7 @@
-#!/usr/bin/env -S deno run --allow-all
+#!/usr/bin/env -S bun run
 
-const command = new Deno.Command(Deno.execPath(), {
-  args: [
-    'task',
-    ...Deno.args,
-  ],
-  env: Deno.env.toObject(),
-  stdin: 'inherit',
-  stdout: 'inherit',
-  stderr: 'inherit',
-}).outputSync();
+import { $ } from 'bun';
 
-Deno.exit(command.code);
+const result = await $`bun run ${process.argv.slice(2).join(' ')}`;
+
+process.exit(result.code);
