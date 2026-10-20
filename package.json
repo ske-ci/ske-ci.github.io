@@ -1,5 +1,5 @@
 {
-  "name": "siguici.github.io",
+  "name": "ske.ci",
   "type": "module",
   "version": "0.0.0",
   "description": "Personal website, documentation, and technical knowledge base.",
@@ -8,15 +8,15 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://siguici.github.io",
+  "homepage": "https://ske-ci.github.io",
   "author": {
     "name": "Sigui Kessé Emmanuel",
-    "email": "contact@sigui.ci",
-    "url": "https://siguici.github.io"
+    "email": "ske.ci@proton.me",
+    "url": "https://ske.ci"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/siguici/siguici"
+    "url": "https://github.com/ske-ci/ske-ci.github.io"
   },
   "scripts": {
     "build": "astro build",

@@ -42,12 +42,12 @@ export default defineConfig({
         {
           icon: 'github',
           label: 'GitHub',
-          href: 'https://github.com/siguici',
+          href: 'https://github.com/ske-ci',
         },
         {
           icon: 'twitter',
           label: 'X',
-          href: 'https://x.com/siguici',
+          href: 'https://x.com/ske_ci',
         },
         {
           icon: 'discord',
@@ -57,11 +57,11 @@ export default defineConfig({
         {
           icon: 'youtube',
           label: 'YouTube',
-          href: 'https://youtube.com/@siguici',
+          href: 'https://youtube.com/@ske-ci',
         },
       ],
       editLink: {
-        baseUrl: 'https://github.com/siguici/siguici/edit/0.x/doc/',
+        baseUrl: 'https://github.com/ske-ci/ske-ci.github.io/edit/0.x/doc/',
       },
       sidebar: [
         {

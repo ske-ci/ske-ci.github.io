@@ -1,5 +1,6 @@
 ---
 const { __ } = Astro.locals;
+import { app } from '../config';
 ---
 
 <header class="sticky top-0 z-50 w-full border-b border-black/5 bg-white/80 backdrop-blur-md dark:border-white/5 dark:bg-[#0d1117]/80">
@@ -8,7 +9,7 @@ const { __ } = Astro.locals;
     <!-- Brand / Logo -->
     <a href="#" class="font-mono flex items-center gap-2 font-bold tracking-tight text-xl">
       <span class="text-primary">&lt;</span>
-      <span>siguici</span>
+      <span>{app.name}</span>
       <span class="text-primary">/&gt;</span>
     </a>
 
