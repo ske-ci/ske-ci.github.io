@@ -1,62 +1,69 @@
 name: CD
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
+
 permissions:
   contents: read
-  pages: write
-  id-token: write
-  actions: read
+
 concurrency:
   group: pages
   cancel-in-progress: true
+
 jobs:
   build:
-    runs-on: ${{ matrix.operating-system }}
-    strategy:
-      matrix:
-        operating-system: [ubuntu-latest]
-        node-version: [26.12.1]
-        pnpm-version: [12.16.1]
     name: 📦️ Build and validate
+    runs-on: ubuntu-latest
+
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v7
+
       - name: 🔧 Setup Node.js and PNPM
         uses: pnpm/setup@v3
         with:
-          version: ${{ matrix.pnpm-version }}
-          runtime: node@${{ matrix.node-version }}
+          version: 12.16.1
+          runtime: node@26.12.1
           cache: true
           require-lockfile: true
-      - name: Verify toolchain
+
+      - name: 🔍 Verify toolchain
         run: |
+          test "$(node --version)" = "v26.12.1"
+          test "$(pnpm --version)" = "12.16.1"
           node --version
           pnpm --version
+
       - name: 🍱 Generate PWA icons
         run: pnpm run pwa:icons
+
       - name: ✅ Check project
         run: pnpm run check
+
       - name: 👷 Build site
         run: pnpm run build
+
       - name: 📥 Upload distribution files
-        id: deployment
         uses: actions/upload-pages-artifact@v5
         with:
           path: ./dist
+
   deploy:
+    name: 🚀 Publish to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    strategy:
-      fail-fast: true
-      matrix:
-        operating-system: [ubuntu-latest]
-    name: 🚀 Publish to GitHub Pages
+
     steps:
       - name: 📂 Deploy to GitHub Pages
         id: deployment
