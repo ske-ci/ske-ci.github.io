@@ -22,6 +22,7 @@ export const templates = {
   default: DefaultTemplate,
   modern: ModernTemplate,
   minimal: MinimalTemplate,
+  compact: CompactTemplate,
   futurist: FuturistTemplate,
   manifesto: ManifestoTemplate,
   technical: TechnicalTemplate,
