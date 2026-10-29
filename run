@@ -1,7 +1,0 @@
-#!/usr/bin/env -S bun run
-
-import { $ } from 'bun';
-
-const result = await $`bun run ${process.argv.slice(2).join(' ')}`;
-
-process.exit(result.code);

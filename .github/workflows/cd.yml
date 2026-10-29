@@ -9,23 +9,38 @@ permissions:
   pages: write
   id-token: write
   actions: read
+concurrency:
+  group: pages
+  cancel-in-progress: true
 jobs:
   build:
     runs-on: ${{ matrix.operating-system }}
     strategy:
       matrix:
         operating-system: [ubuntu-latest]
-        bun-version: [1.4.3]
-    name: 📦️ Building @siguici's pages
+        node-version: [26.12.1]
+        pnpm-version: [12.16.1]
+    name: 📦️ Build and validate
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v6
-      - name: 🔧 Setup JS
-        uses: siguici/setup-js@v1
+        uses: actions/checkout@v7
+      - name: 🔧 Setup Node.js and PNPM
+        uses: pnpm/setup@v3
         with:
-          runtime: bun
-          version: ${{ matrix.bun-version }}
-          scripts: pwa:icons,check,build
+          version: ${{ matrix.pnpm-version }}
+          runtime: node@${{ matrix.node-version }}
+          cache: true
+          require-lockfile: true
+      - name: Verify toolchain
+        run: |
+          node --version
+          pnpm --version
+      - name: 🍱 Generate PWA icons
+        run: pnpm run pwa:icons
+      - name: ✅ Check project
+        run: pnpm run check
+      - name: 👷 Build site
+        run: pnpm run build
       - name: 📥 Upload distribution files
         id: deployment
         uses: actions/upload-pages-artifact@v5
@@ -41,7 +56,7 @@ jobs:
       fail-fast: true
       matrix:
         operating-system: [ubuntu-latest]
-    name: 🚀 Deploy siguici.github.io
+    name: 🚀 Publish to GitHub Pages
     steps:
       - name: 📂 Deploy to GitHub Pages
         id: deployment

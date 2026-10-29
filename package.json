@@ -18,45 +18,42 @@
     "type": "git",
     "url": "https://github.com/ske-ci/ske-ci.github.io"
   },
+  "engines": {
+    "node": "26.12.1"
+  },
+  "packageManager": "pnpm@12.16.1",
   "scripts": {
     "build": "astro build",
-    "check": "astro check && biome ci . && ./run i18n:check",
+    "check": "astro check && biome ci . && pnpm i18n:check",
     "dev": "astro dev",
-    "fix": "./run sync && biome check --write . && biome format --write .",
-    "i18n:check": "bun scripts/check-i18n.ts",
+    "fix": "pnpm sync && biome check --write . && biome format --write .",
+    "i18n:check": "node scripts/check-i18n.ts",
     "preview": "astro preview",
-    "prod": "./run check && ./run build",
+    "prod": "pnpm check && pnpm build",
     "pwa:icons": "./scripts/generate-icons.sh",
-    "serve": "bun dist/server/entry.mjs",
     "sync": "astro sync",
-    "upgrade": "bunx @astrojs/upgrade"
+    "upgrade": "pnpm dlx @astrojs/upgrade"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.41.7",
-    "astro": "^7.2.0",
-    "sharp": "^0.35.3"
+    "@astrojs/starlight": "^0.41.11",
+    "astro": "^7.4.3",
+    "sharp": "^0.35.5"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
+    "@astrojs/check": "^0.9.12",
     "@astrojs/rss": "^4.0.19",
-    "@astrojs/sitemap": "^3.7.3",
+    "@astrojs/sitemap": "^3.7.4",
     "@astrojs/starlight-tailwind": "^5.0.0",
-    "@biomejs/biome": "^2.5.7",
+    "@biomejs/biome": "^2.6.3",
     "@fontsource-variable/geist": "^5.3.0",
     "@fontsource-variable/geist-mono": "^5.3.0",
     "@fontsource/geist-sans": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
-    "@types/node": "^26.1.2",
+    "@types/node": "^26.6.5",
     "@vite-pwa/astro": "^1.2.0",
-    "autoprefixer": "^10.5.4",
-    "pwa-asset-generator": "^8.1.5",
+    "pwa-asset-generator": "^8.1.7",
     "tailwindcss": "^4.3.3",
-    "ts-node": "^10.9.2",
-    "tslib": "^2.8.1",
     "typescript": "^6.0.3",
     "workbox-window": "^7.4.1"
-  },
-  "trustedDependencies": [
-    "sharp"
-  ]
+  }
 }
