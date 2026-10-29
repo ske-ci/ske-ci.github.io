@@ -1,16 +1,18 @@
 ---
+
 title: Ahlabik.TN
 pubDate: 2024-10-05 00:00:00
 img: /images/ahlabik.png
 img_alt: Screenshot of the Ahlabik homepage showcasing the user-friendly interface and product listings.
 description: |
-  A collaborative e-commerce platform where partners can list their products,
-  making them accessible to a growing community of buyers.
+A collaborative e-commerce platform where partners can list their products,
+making them accessible to a growing community of buyers.
 tags:
-  - E-commerce
-  - TALL Stack
-  - CTO
-  - PostgreSQL
+- E-commerce
+- TALL Stack
+- CTO
+- PostgreSQL
+
 ---
 
 ## Ahlabik Tunisia

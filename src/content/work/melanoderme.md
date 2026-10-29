@@ -1,14 +1,16 @@
 ---
+
 title: Melanoderme – Clothing Brand E-commerce
 pubDate: 2024-09-10 00:00:00
 img: /images/melanoderme.png
 img_alt: Screenshot of the Melanoderme website displaying various clothing items and a clean layout.
 description: |
-  Melanoderme is a clothing brand founded by Gabonese students in Tunisia, aiming to celebrate cultural identity through fashion.
+Melanoderme is a clothing brand founded by Gabonese students in Tunisia, aiming to celebrate cultural identity through fashion.
 tags:
-  - E-commerce
-  - Clothing
-  - TALL Stack
+- E-commerce
+- Clothing
+- TALL Stack
+
 ---
 
 ## Melanoderme

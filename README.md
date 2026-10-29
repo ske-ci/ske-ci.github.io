@@ -21,12 +21,12 @@ This project is more than a personal landing page.
 
 It is designed as a long-lived personal digital space combining:
 
-* **Personal profile** — background, experience, skills, and professional identity.
-* **Portfolio** — selected projects, experiments, and work.
-* **Engineering notes** — technical writing, architecture decisions, experiments, and lessons learned.
-* **Documentation** — structured documentation for projects, libraries, and developer tooling.
-* **References** — reusable technical knowledge and resources.
-* **Open-source projects** — documentation and entry points for projects maintained or developed by me.
+- **Personal profile** — background, experience, skills, and professional identity.
+- **Portfolio** — selected projects, experiments, and work.
+- **Engineering notes** — technical writing, architecture decisions, experiments, and lessons learned.
+- **Documentation** — structured documentation for projects, libraries, and developer tooling.
+- **References** — reusable technical knowledge and resources.
+- **Open-source projects** — documentation and entry points for projects maintained or developed by me.
 
 The site is intentionally built as a content-oriented platform rather than a static portfolio template.
 
@@ -88,8 +88,8 @@ The repository also contains a small `run` helper used by several project tasks.
 
 You should have:
 
-* [Deno](https://deno.com/) **2.9.x**
-* Git
+- [Deno](https://deno.com/) **2.9.x**
+- Git
 
 Node.js is not required as the primary runtime. Deno manages the project's JavaScript/TypeScript dependencies and executes the development tooling.
 
@@ -158,12 +158,12 @@ deno task check
 
 The complete check pipeline includes:
 
-* Astro type/content checking
-* Biome CI checks
-* Deno formatting verification
-* Deno type checking
-* Deno linting
-* internationalization validation
+- Astro type/content checking
+- Biome CI checks
+- Deno formatting verification
+- Deno type checking
+- Deno linting
+- internationalization validation
 
 ### Automatic fixes
 
@@ -244,13 +244,13 @@ The documentation section is powered by **Astro Starlight**.
 
 It provides:
 
-* structured technical documentation;
-* project references;
-* getting-started guides;
-* open-source project documentation;
-* automatically generated reference sections;
-* documentation navigation;
-* edit links back to GitHub.
+- structured technical documentation;
+- project references;
+- getting-started guides;
+- open-source project documentation;
+- automatically generated reference sections;
+- documentation navigation;
+- edit links back to GitHub.
 
 The current documentation structure includes:
 
@@ -394,12 +394,12 @@ However, useful corrections and improvements are welcome.
 
 Examples include:
 
-* fixing factual or typographical errors;
-* improving documentation;
-* correcting broken links;
-* improving accessibility;
-* fixing reproducible technical issues;
-* suggesting improvements to the site's infrastructure.
+- fixing factual or typographical errors;
+- improving documentation;
+- correcting broken links;
+- improving accessibility;
+- fixing reproducible technical issues;
+- suggesting improvements to the site's infrastructure.
 
 Before submitting a change, please run:
 
@@ -435,11 +435,11 @@ See [`LICENSE`](LICENSE) for the complete license text.
 
 Software Engineer · Developer Tooling · Open Source Maintainer · Platform Engineer · Software Architect
 
-* Website — [siguici.sikessem.com](https://siguici.sikessem.com)
-* GitHub — [@siguici](https://github.com/siguici)
-* X — [@siguici](https://x.com/siguici)
-* Discord — [Sikessem Community](https://discord.gg/PURzNH7KBj)
-* YouTube — [@siguici](https://youtube.com/@siguici)
+- Website — [siguici.sikessem.com](https://siguici.sikessem.com)
+- GitHub — [@siguici](https://github.com/siguici)
+- X — [@siguici](https://x.com/siguici)
+- Discord — [Sikessem Community](https://discord.gg/PURzNH7KBj)
+- YouTube — [@siguici](https://youtube.com/@siguici)
 
 ---
 
