@@ -1,15 +1,25 @@
 {
   "extends": "astro/tsconfigs/strictest",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["out"],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules"
+  ],
+  "contentMappers": [
+    {
+      "package": "@astrojs/ts-content-mapper",
+      "extensions": [".astro"]
+    }
+  ],
   "compilerOptions": {
     "moduleResolution": "Bundler",
     "skipLibCheck": true,
     "verbatimModuleSyntax": true,
     "types": [
-      "astro/client",
-      "vite-plugin-pwa/vanillajs",
-      "vite-plugin-pwa/info"
+      "astro/client"
     ]
   }
 }
