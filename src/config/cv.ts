@@ -1,4 +1,4 @@
-import type { Locale, ProfileId } from '../data/cv/domain/types';
+import type { Locale, ProfileId } from '../domain/cv/types';
 import type { CVTemplate } from '../templates/cv';
 
 export const CV_LOCALES = ['fr', 'en'] as const satisfies readonly Locale[];
