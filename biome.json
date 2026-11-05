@@ -6,7 +6,13 @@
     "useIgnoreFile": true
   },
   "files": {
-    "includes": ["**", "!!**/dist", "!!**/.astro", "!!**/pagefind"]
+    "includes": [
+      "**",
+      "!!**/src/content",
+      "!!**/dist",
+      "!!**/.astro",
+      "!!**/pagefind"
+    ]
   },
   "formatter": {
     "enabled": true,
