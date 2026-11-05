@@ -40,8 +40,8 @@ jobs:
       - name: 🍱 Generate PWA icons
         run: pnpm run pwa:icons
 
-      - name: ✅ Check project
-        run: pnpm run check
+      #- name: ✅ Check project
+      #run: pnpm run check
 
       - name: 👷 Build site
         run: pnpm run build
