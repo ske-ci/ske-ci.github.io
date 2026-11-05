@@ -35,8 +35,8 @@
     "upgrade": "pnpm dlx @astrojs/upgrade"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.42.7",
-    "astro": "^7.4.4",
+    "@astrojs/starlight": "^0.42.8",
+    "astro": "^7.4.5",
     "sharp": "^0.35.5"
   },
   "devDependencies": {
@@ -44,16 +44,16 @@
     "@astrojs/sitemap": "^3.7.4",
     "@astrojs/starlight-tailwind": "^5.0.0",
     "@astrojs/ts-content-mapper": "0.2.0",
-    "@biomejs/biome": "^2.6.3",
+    "@biomejs/biome": "^2.6.5",
     "@fontsource-variable/geist": "^5.3.0",
     "@fontsource-variable/geist-mono": "^5.3.0",
     "@fontsource/geist-sans": "^5.3.0",
-    "@tailwindcss/vite": "^4.3.3",
+    "@tailwindcss/vite": "^4.3.4",
     "@types/node": "^26.6.6",
-    "@vite-pwa/astro": "^1.2.0",
+    "@vite-pwa/astro": "^2.0.0",
     "pwa-asset-generator": "^8.1.7",
-    "tailwindcss": "^4.3.3",
-    "typescript": "^7.1.0-beta",
+    "tailwindcss": "^4.3.4",
+    "typescript": "^7.1.0-dev.20261104.1",
     "workbox-window": "^7.4.1"
   }
 }

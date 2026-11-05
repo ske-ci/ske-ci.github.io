@@ -1,7 +1,7 @@
 import sitemap from '@astrojs/sitemap';
 import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
-import AstroPWA from '@vite-pwa/astro';
+import { AstroPWAIntegration as AstroPWA } from '@vite-pwa/astro';
 import { defineConfig, passthroughImageService } from 'astro/config';
 import { app } from './src/config';
 
